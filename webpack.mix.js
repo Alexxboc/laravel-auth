@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,10 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css')
-    .sass('resources/sass/admin.scss', 'public/css')
-    .copyDirectory('resources/img', 'public/img')
+mix.js("resources/js/app.js", "public/js")
+    .vue({ version: 2 })
+    .sass("resources/sass/app.scss", "public/css")
+    .sass("resources/sass/admin.scss", "public/css")
+    .copyDirectory("resources/img", "public/img")
     .options({
-        processCssUrls: false
+        processCssUrls: false,
     });
