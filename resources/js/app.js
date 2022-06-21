@@ -20,7 +20,6 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 
-import App from './views/App'
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
