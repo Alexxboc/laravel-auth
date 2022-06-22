@@ -17,7 +17,7 @@ class PostController extends Controller
     {
         $posts = Post::orderByDesc('id')->get();
         //dd($posts);
-        return view('admin.posts.index',compact('posts'));
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
@@ -42,7 +42,7 @@ class PostController extends Controller
 
         // Validate data
         $val_data = $request->validated();
-        
+
         // Gererate slugs
         $slug = Post::generateSlug($request->title);
         $val_data['slug'] = $slug;
@@ -61,7 +61,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view('admin.posts.show', compact('post'));
     }
 
     /**
