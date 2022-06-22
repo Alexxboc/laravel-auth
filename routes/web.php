@@ -19,7 +19,9 @@ Auth::routes();
 //Define /admin routes
 Route::middleware('auth')->prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
     Route::get('/', 'HomeController@index')->name('dashboard');
-    Route::resource('posts', 'PostController');
+    Route::resource('posts', 'PostController')->parameters([
+        'posts' => 'post:slug'
+    ]);
 });
 
 //Route::get('/home', 'HomeController@index')->name('home');
