@@ -6,7 +6,7 @@
 
 
 <script>
-import WorkInProgress from "../components/WorkInProgress";
+import WorkInProgress from "../components/WorkInProgress.vue";
 export default {
   name: "App",
   components: { WorkInProgress },
